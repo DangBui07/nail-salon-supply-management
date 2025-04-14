@@ -15,5 +15,15 @@ export default defineConfig([
     languageOptions: { globals: globals.browser },
   },
   tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
+  {
+    ...pluginReact.configs.flat.recommended,
+    settings: {
+      react: {
+        version: 'detect', // Automatically detect the React version
+      },
+    },
+    rules: {
+      'react/react-in-jsx-scope': 'off', // Disable the rule for React 17+
+    },
+  },
 ]);
