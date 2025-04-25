@@ -1,4 +1,4 @@
-import AuthForm from './AuthForm/AuthForm.tsx';
+import AuthForm from './components/AuthForm/AuthForm.tsx';
 
 function App() {
   return <AuthForm />;
